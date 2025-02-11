@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.186);
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    display: inline-block;
+}
+
+header li {
+    padding: 30px 40px;
+    color: #ffffff;
+}
+
+header li.active,
+header li:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Logo+background/bg2.jpg);
+    opacity: 0.8;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.images {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    --rotate: 0deg;
+    transform: translate(-50%, 50%) rotate(var(--rotate));
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 10px solid #ffffff;
+    transition: transform 0.5s ease-in-out;
+}
+
+.images .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(calc(60deg * var(--i))) translateY(-400px);   
+}
+
+.images .item img {
+    height: 150px; 
+    border-radius: 15%;
+}
+
+.content {
+    color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    text-align: justify;
+    width: 450px;
+    font-size: 1.2rem;
+}
+
+.content h1 {
+    color: #ffb700;
+    font-size: 1.9em;
+}
+
+.content .item {
+    display: none;
+}
+
+.content .item.active {
+    display: block;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content .item.active h1 {
+    opacity: 0;
+    animation: showContent 0.5s ease-in-out 1 forwards;
+}
+
+.content .item.active .text {
+    opacity: 0;
+    animation: showContent 0.5s 0.3s ease-in-out 1 forwards;
+}
+
+#prev,
+#next {
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 250px;
+    font-size: 100px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.6;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+#next {
+    left: unset;
+    right: 250px;
+}
+
+#next:hover,
+#prev:hover {
+    opacity: 1;
+}

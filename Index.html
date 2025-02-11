@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul On Wheels</title>
+    <link rel="stylesheet" href="css/Website_StyleSheet.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(to bottom, #8e0e00, #24201c);
+        font-family: 'Baloo Bhai', cursive;
+        background-size: cover;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/Logo+background/logo2.png" alt="Soul On Wheels">
+        </div>
+        <div id="navbar-text">
+            <h1>Soul On Wheels</h1>
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#about" target="_blank">About Us </a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="header-primary center">Welcome to Soul on Wheels</h1>
+        <p>Welcome to Soul On Wheels, where we offer exceptional automotive solutions with unparalleled service and expertise. </p>
+        <p>Experience unmatched customer satisfaction and a diverse range of vehicles tailored to meet your needs. </p>
+        <p>Explore our showroom's premium, high-quality cars available for you.</p>
+
+        <button class="btn" onclick="window.open('booking.html', '_blank');">View Cars</button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="header-primary center">Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="images/Services/deal.jpg" alt="">
+                <h2 class="header-secondary center">Car Deal</h2>
+                <p class="center">At Soul On Wheels, we offer unbeatable car deals tailored to your needs. Whether you're looking for a new vehicle or a great price on a pre-owned car, our expert team ensures a seamless experience. Drive away with confidence and savings. Discover the perfect car deal with us today! </p>
+            </div>
+            <div class="box">
+                <img src="images/Services/Car service.avif" alt="">
+                <h2 class="header-secondary center">Car Service</h2>
+                <p class="center">At Soul On Wheels, our top-tier car service keeps your vehicle running smoothly and safely. From routine maintenance to complex repairs, our skilled technicians use state-of-the-art equipment to deliver exceptional care. Trust us to keep your car in peak condition, ensuring reliability and performance for every journey.</p>
+            </div>
+            <div class="box">
+                <img src="images/Services/rental.avif" alt="">
+                <h2 class="header-secondary center">Rent a Car</h2>
+                <p class="center">Experience flexibility and convenience with Soul On Wheels' car rental services. Whether you need a vehicle for a day or a month, our diverse fleet of well-maintained cars suits all your travel needs. Enjoy competitive rates, excellent customer service, and the freedom to explore with ease. Rent with us today!.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="header-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="images/Clients/logo1.png" alt="Our Client">
+            </div>
+            <div class="client-item2">
+                <img src="images/Clients/ferrari.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="images/Clients/microsoft.png" alt="Our Client">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="header-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="backend.php">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="myname" id="name" placeholder="Enter your name">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="myemail" id="email" placeholder="Enter your email">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="phonenumber">Phone Number:</label>
+                    <input type="number" name="myphonenumber" id="phonenumber" placeholder="Enter your phone number">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="mymessage" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                </div>
+            </form>
+        </div>
+        <section id="contact-container">
+            <button class="btn"> Sumbit Now </button>
+        </section>
+    </section>
+
+
+
+    <hr>
+    <footer>
+        <div class="center">
+            www.SoulOnWheels.com <br>
+            Copyright &copy;| All rights reserved
+        </div>
+    </footer>
+    <hr>
+
+
+
+
+</body>
+
+</html>
