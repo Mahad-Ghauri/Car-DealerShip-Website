@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soul On Wheels</title>
     <link rel="stylesheet" href="css/Website_StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
     body {
@@ -34,6 +35,18 @@
             <li class="item"><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Luxury on Wheels</h1>
+            <p class="hero-subtitle">Discover our exclusive collection of premium vehicles</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="window.open('booking.html', '_blank');">View Inventory</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact Us</button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
 
     <section id="home">
         <h1 class="header-primary center">Welcome to Soul on Wheels</h1>
@@ -86,6 +99,54 @@
         </div>
     </section>
 
+    <section id="featured-vehicles">
+        <h1 class="header-primary center">Featured Vehicles</h1>
+        <div class="featured-container">
+            <div class="featured-card">
+                <div class="featured-badge">New Arrival</div>
+                <img src="images/Cars/bmw-m-sport-car-dh.jpg" alt="BMW M Sport">
+                <div class="featured-details">
+                    <h3>BMW M Sport</h3>
+                    <p class="featured-price">$75,000</p>
+                    <div class="featured-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 3.0L</span>
+                        <span><i class="fas fa-horse"></i> 382 HP</span>
+                        <span><i class="fas fa-gas-pump"></i> 22 MPG</span>
+                    </div>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-badge">Popular</div>
+                <img src="images/Cars/adro-bmw-m4-coupee-4k-v1.jpg" alt="BMW M4 Coupe">
+                <div class="featured-details">
+                    <h3>BMW M4 Coupe</h3>
+                    <p class="featured-price">$82,000</p>
+                    <div class="featured-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 3.0L</span>
+                        <span><i class="fas fa-horse"></i> 473 HP</span>
+                        <span><i class="fas fa-gas-pump"></i> 19 MPG</span>
+                    </div>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-badge">Limited Edition</div>
+                <img src="images/Cars/yellow-porsche-911-gt3rs-5k-fh-1920x1080.jpg" alt="Porsche 911 GT3 RS">
+                <div class="featured-details">
+                    <h3>Porsche 911 GT3 RS</h3>
+                    <p class="featured-price">$185,000</p>
+                    <div class="featured-specs">
+                        <span><i class="fas fa-tachometer-alt"></i> 4.0L</span>
+                        <span><i class="fas fa-horse"></i> 520 HP</span>
+                        <span><i class="fas fa-gas-pump"></i> 16 MPG</span>
+                    </div>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services-container">
         <h1 class="header-primary center">Services</h1>
         <div id="services">
@@ -118,6 +179,63 @@
             </div>
             <div class="client-item">
                 <img src="images/Clients/microsoft.png" alt="Our Client">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h1 class="header-primary center">What Our Clients Say</h1>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Soul On Wheels provided an exceptional car buying experience. Their team was professional, knowledgeable, and made the entire process seamless."</p>
+                <div class="testimonial-author">
+                    <img src="images/testimonials/client1.jpg" alt="John Smith">
+                    <div>
+                        <h4>John Smith</h4>
+                        <p>BMW M4 Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The service department is top-notch. They kept me informed throughout the entire process and completed the work ahead of schedule."</p>
+                <div class="testimonial-author">
+                    <img src="images/testimonials/client2.jpg" alt="Sarah Johnson">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <p>Porsche 911 Owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"I rented a luxury car for a weekend getaway and was impressed by the condition and cleanliness. Will definitely use their rental service again!"</p>
+                <div class="testimonial-author">
+                    <img src="images/testimonials/client3.jpg" alt="Michael Brown">
+                    <div>
+                        <h4>Michael Brown</h4>
+                        <p>Luxury Car Rental Client</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -158,18 +276,89 @@
         </section>
     </section>
 
-
+    <section id="newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive offers, new arrivals, and automotive insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <div class="newsletter-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-gift"></i>
+                        <span>Exclusive Offers</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-car"></i>
+                        <span>New Arrivals</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Service Tips</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <hr>
     <footer>
-        <div class="center">
-            www.SoulOnWheels.com <br>
-            Copyright &copy;| All rights reserved
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Soul On Wheels</h3>
+                <p>Your premier destination for luxury vehicles, exceptional service, and automotive excellence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured-vehicles">Featured Vehicles</a></li>
+                    <li><a href="#services-container">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">New Vehicles</a></li>
+                    <li><a href="#">Pre-Owned Vehicles</a></li>
+                    <li><a href="#">Car Service</a></li>
+                    <li><a href="#">Car Rental</a></li>
+                    <li><a href="#">Financing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Lane, Beverly Hills, CA 90210</li>
+                    <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@soulonwheels.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM, Sun: 10AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Soul On Wheels. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
         </div>
     </footer>
     <hr>
 
     <script src="js/carousel.js"></script>
+    <script src="js/newsletter.js"></script>
 </body>
 
 </html>
