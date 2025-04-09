@@ -683,6 +683,86 @@ footer {
     margin-bottom: 20px;
 }
 
+/*----------------------------------- Financing Options -----------------------------------*/
+#financing-options {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.05), rgba(71, 85, 105, 0.05));
+}
+
+.financing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.financing-card {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 20px rgba(30, 41, 59, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.financing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 41, 59, 0.2);
+}
+
+.financing-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #D946EF, #7E22CE);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.financing-card h3 {
+    font-size: 1.8rem;
+    color: #1E293B;
+    margin-bottom: 15px;
+}
+
+.financing-rate {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #D946EF;
+    margin-bottom: 20px;
+}
+
+.financing-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+.financing-details li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.financing-details i {
+    color: #D946EF;
+    font-size: 1.2rem;
+}
+
 /*----------------------------------- Testimonials -----------------------------------*/
 #testimonials {
     padding: 80px 0;
