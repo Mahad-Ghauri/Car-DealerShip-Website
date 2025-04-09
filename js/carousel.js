@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the carousel
     function initCarousel() {
         // Show the first slide initially
+        
         slides[0].classList.add('active');
         
         // Add touch support

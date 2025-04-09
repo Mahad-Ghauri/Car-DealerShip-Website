@@ -1169,3 +1169,295 @@ footer {
         gap: 10px;
     }
 }
+
+/*----------------------------------- Responsive Styles -----------------------------------*/
+@media (max-width: 1200px) {
+    .featured-container,
+    .showroom-container,
+    .offers-container,
+    .financing-container,
+    .testimonials-container {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-primary {
+        font-size: 2.2rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .featured-card,
+    .showroom-card,
+    .offer-card,
+    .financing-card,
+    .testimonial-card {
+        width: 300px;
+    }
+
+    .footer-container {
+        padding: 40px 20px;
+    }
+
+    .footer-column {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    #navbar ul li {
+        margin: 5px 0;
+    }
+
+    #navbar ul li a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .featured-container,
+    .showroom-container,
+    .offers-container,
+    .financing-container,
+    .testimonials-container {
+        padding: 0 15px;
+    }
+
+    .featured-card,
+    .showroom-card,
+    .offer-card,
+    .financing-card,
+    .testimonial-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-primary {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .featured-details h3,
+    .showroom-details h3,
+    .offer-content h3,
+    .financing-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .featured-price,
+    .offer-discount,
+    .financing-rate {
+        font-size: 1.5rem;
+    }
+
+    .featured-specs,
+    .showroom-features,
+    .financing-details {
+        font-size: 0.8rem;
+    }
+
+    .carousel-slide img {
+        height: 200px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-author h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-author p {
+        font-size: 0.8rem;
+    }
+
+    #contact-box form {
+        width: 90%;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .featured-container,
+    .showroom-container,
+    .offers-container,
+    .financing-container,
+    .testimonials-container {
+        gap: 20px;
+    }
+
+    .featured-card,
+    .showroom-card,
+    .offer-card,
+    .financing-card,
+    .testimonial-card {
+        width: 45%;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .featured-card img,
+    .showroom-view img,
+    .carousel-slide img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Print Styles */
+@media print {
+    #navbar,
+    .hero-buttons,
+    .btn,
+    .view-controls,
+    .newsletter,
+    .footer-bottom-links {
+        display: none !important;
+    }
+
+    .featured-card,
+    .showroom-card,
+    .offer-card,
+    .financing-card,
+    .testimonial-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .header-primary,
+    .header-secondary {
+        color: black !important;
+    }
+}
