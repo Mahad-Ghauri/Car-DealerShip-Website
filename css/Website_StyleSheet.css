@@ -615,6 +615,74 @@ footer {
     color: white;
 }
 
+/*----------------------------------- Special Offers -----------------------------------*/
+#special-offers {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(217, 70, 239, 0.05));
+}
+
+.offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.offer-card {
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(30, 41, 59, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 41, 59, 0.2);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #D946EF, #7E22CE);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.offer-content {
+    text-align: center;
+}
+
+.offer-content h3 {
+    font-size: 1.8rem;
+    color: #1E293B;
+    margin-bottom: 15px;
+}
+
+.offer-discount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #D946EF;
+    margin-bottom: 10px;
+}
+
+.offer-details {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
 /*----------------------------------- Testimonials -----------------------------------*/
 #testimonials {
     padding: 80px 0;
