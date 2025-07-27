@@ -83,7 +83,8 @@ flowchart TD
 
 ## 🎨 Styling & Design
 - Uses modern gradients, shadows, and responsive layouts
-- Main styles in `css/Website_StyleSheet.css`
+- Main styles in `css/Website_StyleSheet.cs
+- Additional styles in `css/style.css
 - Custom fonts and icons for a premium look
 
 ---
@@ -93,5 +94,3 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
