@@ -17,9 +17,9 @@ html {
 #navbar-text {
     font-family: 'Baloo Bhai', cursive;
     font-size: 24px;
-    color: #E9D5FF;
+    color: #1E293B;
     margin-left: 15px;
-    text-shadow: 1px 1px 2px rgba(30, 41, 59, 0.5);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 #navbar-text h1 {
