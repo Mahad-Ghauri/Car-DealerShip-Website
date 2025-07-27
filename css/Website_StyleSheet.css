@@ -16,7 +16,7 @@ html {
 /*----------------------------------- Navbar: Text -----------------------------------*/
 #navbar-text {
     font-family: 'Baloo Bhai', cursive;
-    font-size: 24px;
+    font-size: 16px;
     color: #1E293B;
     margin-left: 15px;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
@@ -51,7 +51,7 @@ html {
 #navbar ul {
     display: flex;
     font-family: 'Baloo Bhai', cursive;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 1000;
 }
 
