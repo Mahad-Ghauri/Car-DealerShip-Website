@@ -33,11 +33,11 @@ html {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: #7E22CE;
+    background-color: #FFFFFF;
     height: var(--navbar-height);
     padding: 0 20px;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(30, 41, 59, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
