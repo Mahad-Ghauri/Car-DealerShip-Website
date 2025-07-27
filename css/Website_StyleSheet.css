@@ -45,7 +45,7 @@ html {
     width: 100px;
     height: 100px;
     margin-left: 20px;
-    filter: invert(100%);
+    filter: none;
 }
 
 #navbar ul {
@@ -61,20 +61,20 @@ html {
 
 #navbar ul li a {
     display: block;
-    color: #E9D5FF;
+    color: #1E293B;
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(37, 99, 235, 0.2);
+    background: rgba(148, 163, 184, 0.2);
 }
 
 #navbar ul li a:hover {
     color: #FFFFFF;
-    background: linear-gradient(135deg, #D946EF, #7E22CE);
+    background: linear-gradient(135deg, #3B82F6, #1E40AF);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(30, 41, 59, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*----------------------------------- Responsive Navbar -----------------------------------*/
