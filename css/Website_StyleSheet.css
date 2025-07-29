@@ -1089,32 +1089,73 @@ footer {
 
 /*----------------------------------- Virtual Showroom -----------------------------------*/
 #virtual-showroom {
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.05), rgba(71, 85, 105, 0.05));
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#virtual-showroom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at bottom, rgba(255, 210, 63, 0.1) 0%, transparent 70%);
+    z-index: 1;
 }
 
 .showroom-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 40px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .showroom-card {
-    width: 350px;
-    background: white;
-    border-radius: 15px;
+    width: 380px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(30, 41, 59, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px var(--shadow-heavy);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.showroom-card:nth-child(1) { animation-delay: 0.2s; }
+.showroom-card:nth-child(2) { animation-delay: 0.4s; }
+.showroom-card:nth-child(3) { animation-delay: 0.6s; }
+
+.showroom-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color), var(--primary-color), var(--accent-color));
+    border-radius: 27px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.showroom-card:hover::before {
+    opacity: 1;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .showroom-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(30, 41, 59, 0.2);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px var(--shadow-heavy);
 }
 
 .showroom-view {
