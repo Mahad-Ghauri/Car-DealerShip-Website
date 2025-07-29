@@ -947,27 +947,66 @@ footer {
 .featured-specs {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    color: #475569;
-    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .featured-specs span {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.featured-specs span:hover {
+    background: rgba(255, 107, 53, 0.2);
+    transform: translateY(-2px);
+}
+
+.featured-specs i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 .btn-outline {
-    background: transparent;
-    border: 2px solid #D946EF;
-    color: #D946EF;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    color: var(--light-color);
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-outline:hover::before {
+    left: 100%;
 }
 
 .btn-outline:hover {
-    background: linear-gradient(135deg, #D946EF, #7E22CE);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--dark-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--shadow-medium);
 }
 
 /*----------------------------------- Virtual Showroom -----------------------------------*/
