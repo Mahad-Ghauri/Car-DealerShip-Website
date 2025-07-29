@@ -107,68 +107,126 @@ html {
     }
 }
 
-/*----------------------------------- Navbar: Text -----------------------------------*/
-#navbar-text {
-    font-family: 'Baloo Bhai', cursive;
-    font-size: 16px;
-    color: #1E293B;
-    margin-left: 15px;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-}
-
-#navbar-text h1 {
-    margin: 0;
-    font-weight: normal;
-}
-
+/*----------------------------------- Navbar -----------------------------------*/
 #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: #FFFFFF;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
     height: var(--navbar-height);
-    padding: 0 20px;
+    padding: 0 40px;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideInFromTop 1s ease-out;
+    transition: all 0.3s ease;
 }
 
+#navbar:hover {
+    background: rgba(26, 26, 46, 0.98);
+    box-shadow: 0 8px 32px var(--shadow-medium);
+}
+
+#navbar-text {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 18px;
+    color: var(--light-color);
+    margin-left: 15px;
+    text-shadow: 2px 2px 4px var(--shadow-medium);
+    animation: fadeInLeft 1s ease-out 0.3s both;
+}
+
+#navbar-text h1 {
+    margin: 0;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#navbar #logo {
+    animation: fadeInLeft 1s ease-out both;
+}
 
 #navbar #logo img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     margin-left: 20px;
-    filter: none;
+    filter: drop-shadow(0 4px 8px var(--shadow-medium));
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+#navbar #logo img:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 8px 16px var(--primary-color));
 }
 
 #navbar ul {
     display: flex;
     font-family: 'Baloo Bhai', cursive;
     font-size: 1rem;
-    font-weight: 1000;
+    font-weight: 600;
+    animation: fadeInRight 1s ease-out 0.5s both;
 }
 
 #navbar ul li {
     list-style: none;
+    margin: 0 5px;
 }
 
 #navbar ul li a {
-    display: block;
-    color: #1E293B;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--light-color);
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    background: rgba(148, 163, 184, 0.2);
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+#navbar ul li a:hover::before {
+    left: 100%;
 }
 
 #navbar ul li a:hover {
-    color: #FFFFFF;
-    background: linear-gradient(135deg, #3B82F6, #1E40AF);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--dark-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px var(--shadow-medium);
+    border: 1px solid var(--primary-color);
+}
+
+#navbar ul li a i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+#navbar ul li a:hover i {
+    transform: scale(1.2) rotate(10deg);
 }
 
 /*----------------------------------- Responsive Navbar -----------------------------------*/
