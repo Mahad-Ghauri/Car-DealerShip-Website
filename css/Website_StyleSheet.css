@@ -510,38 +510,72 @@ html {
 /*--------------------------------- Services Section----------------------------------- */
 #services {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
 }
 
 #services .box {
-    background: linear-gradient(135deg, #7E22CE, #D946EF);
-    padding: 34px;
-    margin: 2px 55px;
-    width: 700px;
-    border-radius: 28px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    width: 400px;
+    border-radius: 25px;
     margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(30, 41, 59, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px var(--shadow-heavy);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+}
+
+#services .box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color), var(--secondary-color), var(--primary-color));
+    border-radius: 27px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#services .box:hover::before {
+    opacity: 1;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 #services .box:hover {
-    transform: scale(1.08);
-    box-shadow: 0 15px 30px rgba(30, 41, 59, 0.4);
-    background: linear-gradient(135deg, #D946EF, #7E22CE);
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 30px 60px var(--shadow-heavy);
 }
 
 #services .box img {
-    height: 160px;
+    height: 180px;
     margin: auto;
     border-radius: 20px;
     display: block;
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 25px var(--shadow-medium);
+}
+
+#services .box:hover img {
+    transform: scale(1.1) rotate(2deg);
 }
 
 #services .box p {
     font-family: 'Baloo Bhai', cursive;
-    color: #f1f1f1;
-    font-size: 1.3rem;
-    text-align: justify;
-    padding-top: 20px;
+    color: var(--light-color);
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 25px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px var(--shadow-medium);
 }
 
 
