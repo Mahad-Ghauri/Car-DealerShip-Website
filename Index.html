@@ -10,12 +10,26 @@
 </head>
 <style>
     body {
-        background: linear-gradient(180deg, #F8FAFC, #E2E8F0, #CBD5E1, #94A3B8);
+        background: linear-gradient(135deg, #1A1A2E 0%, #16213E 25%, #0F3460 50%, #004E89 75%, #1A1A2E 100%);
+        background-attachment: fixed;
         font-family: 'Baloo Bhai', cursive;
-        background-size: cover;
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
         height: 100%;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Add padding to body to account for fixed navbar */
+    body {
+        padding-top: 70px;
     }
 </style>
 
