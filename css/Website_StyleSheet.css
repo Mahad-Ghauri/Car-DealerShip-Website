@@ -695,10 +695,8 @@ footer {
 /*----------------------------------- Hero Section -----------------------------------*/
 #hero {
     position: relative;
-    height: 80vh;
-    background-image: url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -707,57 +705,121 @@ footer {
     overflow: hidden;
 }
 
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, var(--primary-color) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, var(--accent-color) 0%, transparent 50%);
+    opacity: 0.3;
+    animation: float 8s ease-in-out infinite;
+    z-index: 1;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(126, 34, 206, 0.8), rgba(30, 41, 59, 0.7));
-    z-index: 1;
+    background: var(--glass-bg);
+    backdrop-filter: blur(2px);
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
+    z-index: 3;
+    max-width: 900px;
+    padding: 0 40px;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    text-shadow: 4px 4px 8px var(--shadow-heavy);
     font-family: 'Baloo Bhai', cursive;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color), var(--light-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px var(--shadow-medium);
     font-family: 'Baloo Bhai', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    animation: fadeInUp 1s ease-out 0.7s both;
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    animation: fadeInUp 1s ease-out 0.9s both;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #D946EF, #7E22CE);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--dark-color);
     border: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-secondary {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    color: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-secondary:hover::before {
+    left: 100%;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 107, 53, 0.2);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--shadow-medium);
 }
 
 /*----------------------------------- Featured Vehicles -----------------------------------*/
