@@ -233,26 +233,31 @@ html {
 @media (max-width: 768px) {
     #navbar {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        align-items: center;
+        padding: 15px 20px;
+        height: auto;
     }
 
     #navbar ul {
         flex-direction: column;
         width: 100%;
+        margin-top: 15px;
     }
 
     #navbar ul li {
-        margin: 10px 0;
+        margin: 8px 0;
+        width: 100%;
     }
 
     #navbar ul li a {
         width: 100%;
         text-align: center;
+        justify-content: center;
     }
 
     #navbar-text {
         margin-bottom: 10px;
+        margin-left: 0;
     }
 }
 
