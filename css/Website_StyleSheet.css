@@ -328,8 +328,7 @@ html {
 
 /*----------------------------------- Carousel Section -----------------------------------*/
 #carousel-section {
-    padding: 40px 0;
-    background: linear-gradient(135deg, rgba(248, 250, 252, 0.9), rgba(226, 232, 240, 0.8));
+    padding: 80px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -341,8 +340,9 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(30, 64, 175, 0.1));
+    background: radial-gradient(ellipse at center, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
     z-index: 1;
+    animation: pulse 4s ease-in-out infinite;
 }
 
 .carousel-container {
@@ -350,16 +350,33 @@ html {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 25px 50px var(--shadow-heavy);
     z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+.carousel-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color), var(--secondary-color), var(--primary-color));
+    border-radius: 32px;
+    z-index: -1;
+    animation: glow 3s ease-in-out infinite alternate;
 }
 
 .carousel-slide {
     display: none;
     width: 100%;
     position: relative;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide.active {
@@ -371,7 +388,12 @@ html {
     width: 100%;
     height: 600px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 28px;
+    transition: transform 0.8s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05);
 }
 
 .carousel-caption {
@@ -379,67 +401,89 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(30, 41, 59, 0.9), rgba(71, 85, 105, 0.7), transparent);
+    background: linear-gradient(to top, rgba(26, 26, 46, 0.95), rgba(26, 26, 46, 0.7), transparent);
+    backdrop-filter: blur(15px);
     color: white;
-    padding: 30px 20px;
+    padding: 40px 30px;
     text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-top: 1px solid var(--glass-border);
 }
 
 .carousel-caption h3 {
     font-family: 'Baloo Bhai', cursive;
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(30, 41, 59, 0.5);
-    color: #FFFFFF;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px var(--shadow-heavy);
+    color: var(--light-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .carousel-caption p {
     font-family: 'Baloo Bhai', cursive;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgba(30, 41, 59, 0.5);
-    color: #E9D5FF;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px var(--shadow-medium);
+    color: rgba(255, 255, 255, 0.9);
+    animation: fadeInUp 1s ease-out 0.7s both;
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(6, 182, 212, 0.8));
-    color: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--glass-border);
+    color: var(--light-color);
     padding: 20px;
-    border: none;
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 3;
-    box-shadow: 0 4px 8px rgba(30, 41, 59, 0.3);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-button:hover {
-    background: linear-gradient(135deg, rgba(217, 70, 239, 0.9), rgba(126, 34, 206, 0.9));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 15px 35px var(--shadow-heavy);
+    border-color: var(--primary-color);
+    animation: pulse 0.6s ease-in-out;
+}
+
+.carousel-button:active {
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 12px rgba(30, 41, 59, 0.4);
 }
 
 .prev {
     left: 30px;
+    animation: fadeInLeft 1s ease-out 1s both;
 }
 
 .next {
     right: 30px;
+    animation: fadeInRight 1s ease-out 1s both;
 }
 
 @keyframes fadeScale {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(0.9) rotateY(10deg);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) rotateY(0deg);
     }
 }
 
