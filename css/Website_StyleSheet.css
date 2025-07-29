@@ -265,28 +265,65 @@ html {
 #home {
     display: flex;
     flex-direction: column;
-    padding: 3px 200px;
-    height: 533px;
+    padding: 80px 40px;
+    min-height: 600px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    margin: 40px 20px;
+    box-shadow: 0 20px 40px var(--shadow-heavy);
+    animation: fadeInUp 1s ease-out 0.8s both;
+    overflow: hidden;
 }
 
 #home::before {
     content: "";
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 644px;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
     z-index: -1;
-    opacity: 1;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 107, 53, 0.1) 50%, transparent 70%);
+    animation: glow 4s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+#home h1 {
+    animation: fadeInUp 1s ease-out 1s both;
 }
 
 #home p {
-    color: #374151;
+    color: var(--light-color);
     text-align: center;
     font-family: 'Baloo Bhai', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px var(--shadow-medium);
+    animation: fadeInUp 1s ease-out 1.2s both;
+    max-width: 800px;
+}
+
+#home .btn {
+    animation: scaleIn 1s ease-out 1.4s both;
+    margin-top: 30px;
 }
 
 /*----------------------------------- Carousel Section -----------------------------------*/
